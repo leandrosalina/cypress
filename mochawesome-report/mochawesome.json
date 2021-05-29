@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-29T04:27:01.833Z",
+    "end": "2021-05-29T04:27:09.341Z",
+    "duration": 7508,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7aea6899-844b-49f9-accd-66e3a29bcf1f",
+      "title": "",
+      "fullFile": "cypress/integration/articles_spec.js",
+      "file": "cypress/integration/articles_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00f527d5-f8cf-4880-8ce2-523455b972f3",
+          "title": "Artigos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "criar_artigo",
+              "fullTitle": "Artigos criar_artigo",
+              "timedOut": null,
+              "duration": 7487,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.get('a[href$=editor]').click(); //cy.get('input[placeholder=\"Article title\"]').clear();\ncy.get('input[placeholder=\"Article title\"]').type('Artigo de testes'); //cy.get('input[placeholder=\"What is this article about?\"]').clear();\ncy.get('input[placeholder=\"What is this article about?\"]').type('teste de criação de artigo');\ncy.get('form textarea').type('Lorem Ipsum Solum Lorem'); //cy.get(':nth-child(4) > .form-control').clear();\ncy.get('input[placeholder=\"Enter tags\"]').type('lorem ipsum');\ncy.get('button.btn-primary').contains('Publish article').click();\ncy.get('h1').should('contain.text', 'Artigo de testes'); //.click();\n/* ==== End Cypress Studio ==== */\n//comment add\ncy.get('form textarea').type('abra cadabra pé de carbra');\ncy.get('button.btn-primary').contains('Post Comment').click(); //curtir feed\ncy.get('a.author').eq(0).click();\ncy.get('button.btn.btn-sm.btn-outline-primary').click();",
+              "err": {},
+              "uuid": "79ea33a3-679b-4ceb-8852-2c2e50c21795",
+              "parentUUID": "00f527d5-f8cf-4880-8ce2-523455b972f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79ea33a3-679b-4ceb-8852-2c2e50c21795"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7487,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
